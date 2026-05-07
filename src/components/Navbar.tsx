@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -13,15 +14,9 @@ const Navbar = () => {
 
   return (
     <nav className="sticky top-0 z-50 flex items-center justify-between px-6 py-4 bg-nav md:px-12">
-        
-  <span className="font-display text-2xl font-bold tracking-wider text-white">
-    <img
-        src="src/assets/logo.png"
-        alt="EliteSport Logo"
-        className="h-10"
-        height="50"
-        />
-  </span>
+      <span className="font-display text-2xl font-bold tracking-wider text-white">
+        <img src={logo} alt="EliteSport Logo" className="h-16 w-auto" />
+      </span>
 
       {/* Desktop */}
       <ul className="hidden md:flex gap-8">
@@ -38,7 +33,10 @@ const Navbar = () => {
       </ul>
 
       {/* Mobile toggle */}
-      <button className="md:hidden text-foreground" onClick={() => setOpen(!open)}>
+      <button
+        className="md:hidden text-foreground"
+        onClick={() => setOpen(!open)}
+      >
         {open ? <X size={24} /> : <Menu size={24} />}
       </button>
 
