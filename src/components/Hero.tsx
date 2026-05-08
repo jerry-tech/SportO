@@ -22,12 +22,12 @@ const Hero = () => {
         <p className="text-muted-foreground text-lg md:text-xl mb-10">
           Discovering and Developing Elite Football Talent Worldwide
         </p>
-        <button
+        {/* <button
           onClick={scrollToContact}
           className="bg-primary text-primary-foreground font-display text-lg px-8 py-3 rounded hover:opacity-90 transition-opacity"
         >
           Join Now
-        </button>
+        </button> */}
       </div>
     </section>
   );
